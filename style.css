@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MapoFlowerIsland';
-    src: url('/font/MapoFlowerIsland.otf') format('woff');
+    src: url('/font/MapoFlowerIsland.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
