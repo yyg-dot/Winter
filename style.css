@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/MapoFlowerIsland.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 스타일 */
+body {
+    font-family: 'MapoFlowerIsland', sans-serif;
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-weight: 550;
+    word-break: keep-all;
+    line-height: 1.5;
+    margin-top: 20%;
+}
+
+.title {
+    font-family: 'MapoFlowerIsland', sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    color: #333;
+}
+
+.container {
+    margin-left: 50px;
+}
+
+.square-container {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.square {
+    width: 18%;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+#square1 {
+    background-color: #C4DA8B; /* 페이지 1 */
+}
+
+#square2 {
+    background-color: #FF6536; /* 페이지 2 */
+}
+
+#square3 {
+    background-color: #E77212; /* 페이지 3 */
+}
+
+#square4 {
+    background-color: #3796E8; /* 페이지 4 */
+}
+
+/* 호버 상태에서 높이 변경 */
+.square:hover {
+    height: 40px; /* 세로 길이가 50px로 늘어남 */
+}
+
+.word {
+    font-family: 'MapoFlowerIsland', sans-serif;
+    color: #333;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.spaced {
+    font-family: 'MapoFlowerIsland', sans-serif;
+    color: #333;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.spaced.no-margin {
+    margin-right: 0;
+}
+
+.word-container {
+    display: inline-block;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+
+#toggleButton {
+    width: 82px; /* 초기 크기 */
+    height: 63px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-btn.active {
+    transform: scale(1.1);
+}
+
+/* active 클래스가 있을 때 아이콘의 opacity를 1로 설정 */
+.word.active + .icon,
+.spaced.active + .icon {
+    opacity: 1;
+}
+
+.icon-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 100px;
+}
+
+#icon1 {
+    max-width: 95%; /* 반응형 크기 유지 */
+}
+
+#icon2 {
+    max-width: 100%; /* 반응형 크기 유지 */
+}
+
+#icon7 {
+    max-width: 55%; /* 반응형 크기 유지 */
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 40px;
+    }
+    .title {
+        font-size: 15px;
+    }
+    .icon {
+        width: 95%;
+        height: auto;
+    }
+    #icon1 {
+        width: 90%; /* 기본 아이콘 크기 조정 */
+        height: auto;
+        max-width: 95%;
+    }
+    #icon5 {
+        width: 95%; /* 기본 아이콘 크기 조정 */
+        height: auto;
+        max-width: 100%;
+    }
+    #toggleButton {
+        width: 66px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 30px;
+    }
+    .title {
+        font-size: 10px;
+    }
+    .icon {
+        width: 90%;
+        height: auto;
+    }
+    #icon1 {
+        width: 85%; /* 기본 아이콘 크기 조정 */
+        height: auto;
+        max-width: 100%;
+    }
+    #icon5 {
+        width: 90%; /* 기본 아이콘 크기 조정 */
+        height: auto;
+        max-width: 100%;
+    }
+    #toggleButton {
+        width: 57px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 10px;
+    }
+    .icon {
+        width: 85%;
+        height: auto;
+    }
+    #icon1 {
+        width: 80%; /* 기본 아이콘 크기 조정 */
+        height: auto;
+        max-width: 95%;
+    }
+    #icon5 {
+        width: 85%; /* 기본 아이콘 크기 조정 */
+        height: auto;
+        max-width: 100%;
+    }
+    #toggleButton {
+        width: 49px;
+        height: 38px;
+    }
+}
